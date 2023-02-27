@@ -6,7 +6,7 @@
 /*   By: eaubry <eaubry@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 13:02:45 by eaubry            #+#    #+#             */
-/*   Updated: 2023/02/04 15:51:35 by eaubry           ###   ########.fr       */
+/*   Updated: 2023/02/27 16:18:59 by eaubry           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,7 @@ int	ft_check_exit(char **map, int lenght, int width)
 		}
 		i++;
 	}
+	if (count == 0)
+		return (1);
 	return (0);
 }

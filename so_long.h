@@ -6,7 +6,7 @@
 /*   By: eaubry <eaubry@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 13:39:04 by eaubry            #+#    #+#             */
-/*   Updated: 2023/02/21 14:44:54 by eaubry           ###   ########.fr       */
+/*   Updated: 2023/02/27 17:27:24 by eaubry           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,19 +88,17 @@
 		t_exit exit;
 	} t_global;
 	
-char	**ft_fill_map(t_global *global);
+int	ft_fill_map(t_global *global);
 
 int	main();
 
 void	ft_free_map(char **map);
 
-int	ft_check_map(char **map);
-
 int	ft_check_collectables(char **map, int height, int width);
 
 int	ft_check_exit(char **map, int height, int width);
 
-int	ft_check_map(char **map);
+int	ft_check_map(char **map, char *name);
 
 int	ft_check_path(char **map, int height, int width);
 

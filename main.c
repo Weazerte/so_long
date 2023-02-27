@@ -6,7 +6,7 @@
 /*   By: eaubry <eaubry@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 14:28:17 by eaubry            #+#    #+#             */
-/*   Updated: 2023/02/21 13:48:58 by eaubry           ###   ########.fr       */
+/*   Updated: 2023/02/27 17:27:59 by eaubry           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ int	main(int ac, char **av)
 		global.img.mlx_ptr = mlx_init();
 		global.img.win_ptr = mlx_new_window
 			(global.img.mlx_ptr, WIDTH, HEIGHT, "gayming");
-		global.map.map = ft_fill_map(&global);
+		result = ft_fill_map(&global);
 		global.map.map_unch = ft_map_dup(global.map.map);
 		ft_create_img(&global);
-		result = ft_check_map(global.map.map);
+		result += ft_check_map(global.map.map, av[1]);
 		if (result == 0)
 			ft_print_map(&global, 1);
 		else
